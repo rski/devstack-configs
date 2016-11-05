@@ -1,0 +1,10 @@
+[[local|localrc]]
+ADMIN_PASSWORD=secret
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD
+
+enable_plugin heat https://git.openstack.org/openstack/heat
+enable_plugin networking-bgpvpn https://github.com/rski/networking-bgpvpn heat_package
+disable_service c-api c-sch c-vol
+
